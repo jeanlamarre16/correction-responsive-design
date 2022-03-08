@@ -1,0 +1,117 @@
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    line-height: 1.5;
+    background-color: #EEE;
+}
+
+ul, body, h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1, h2, h3 {
+    font-weight: normal;
+    font-size: 1rem;
+}
+
+h1 {
+    color: white; 
+}
+  
+nav {
+    background-color: #f76c6c;
+    padding: 0.5rem;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 250px;
+    background-image: url('http://placekitten.com/200/300');
+    background-size: cover;
+    background-position: center center;
+}
+
+header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 600;
+}
+
+main {
+    padding: 0 10px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+section {
+    max-width: 65ch;
+    margin: 0 auto;
+}
+
+.articles article h1{
+    color:black;    
+}
+
+.articles{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+article{
+    border-radius: 3px;
+    box-shadow: 10px 10px 10px black;
+    padding: 10px 5px;
+}
+
+article:first-of-type {
+    grid-column: 1 / span 2;
+}
+
+footer {
+    background-color: #f76c6c;
+    margin-top: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center ;
+    padding: 0 10px
+}
+
+
+@media screen and (min-width: 360px){
+    .articles{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    article:first-of-type {
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2;
+    }
+}
